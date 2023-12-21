@@ -70,5 +70,5 @@ class SubtitleCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
-    }e
+    }
 }
