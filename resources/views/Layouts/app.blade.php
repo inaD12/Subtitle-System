@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Agnes Template</title>
+    <title>Subtitle System</title>
     <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara:400,700|Mukta:500,700" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +17,7 @@
                 <div class="site-header-inner">
                     <div class="brand header-brand">
                         <h1 class="m-0">
-                            <a href="#">
+                            <a href="http://subtitle-system.com/">
                                 <svg width="48" height="32" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
                                     <title>Agnes</title>
                                     <defs>
