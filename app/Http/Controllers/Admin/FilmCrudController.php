@@ -29,23 +29,26 @@ class FilmCrudController extends CrudController
         CRUD::setModel(\App\Models\Film::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/film');
         CRUD::setEntityNameStrings('film', 'films');
+        $this->crud->addFields($this->getFieldsData());
     }
 
     /**
-     * Define what happens when the List operation is loaded.
-     * 
-     * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
-     * @return void
-     */
-    protected function setupListOperation()
-    {
-        CRUD::setFromDb(); // set columns from db columns.
+ * Define what happens when the List operation is loaded.
+ *
+ * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
+ * @return void
+ */
+protected function setupListOperation()
+{
+    $this->crud->set('show.setFromDb', false);
+    $this->crud->addColumns($this->getFieldsData(TRUE));
 
-        /**
-         * Columns can be defined using the fluent syntax:
-         * - CRUD::column('price')->type('number');
-         */
-    }
+    /**
+     * Columns can be defined using the fluent syntax or array syntax:
+     * - CRUD::column('price')->type('number');
+     * - CRUD::addColumn(['name' => 'price', 'type' => 'number']);
+     */
+}
 
     /**
      * Define what happens when the Create operation is loaded.
@@ -73,5 +76,32 @@ class FilmCrudController extends CrudController
     protected function setupUpdateOperation()
     {
         $this->setupCreateOperation();
+    }
+
+    private function getFieldsData($show = FALSE) {
+        return [
+            [
+                'name'=> 'title',
+                'label' => 'Title',
+                'type'=> 'text'
+            ],
+            [
+                'name' => 'year',
+                'label' => 'Year',
+                'type' => 'number'
+            ],
+            [
+                'name' => 'genre',
+                'label' => 'Genre',
+                'type' => 'text'
+            ],
+            [
+                'label' => "Film Image",
+                'name' => "image",
+                'type' => ($show ? 'view' : 'upload'),
+                'view' => 'partials/image',
+                'upload' => true,
+            ]
+        ];
     }
 }

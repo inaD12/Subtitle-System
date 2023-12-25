@@ -18,6 +18,7 @@
                                 <th>Title</th>
                                 <th>Year</th>
                                 <th>Genre</th>
+                                <th>Image</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -26,6 +27,7 @@
                                 <td>{{$movie->title}}</td>
                                 <td>{{$movie->year}}</td>
                                 <td>{{$movie->genre}}</td>
+                                <td><img src="{{ asset($movie->image) }}" width="120" alt=""></td>
                             </tr>
                         @endforeach
                         </tbody>
