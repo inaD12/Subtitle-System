@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\SubtitleRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
-use App\Http\Requests\FilmRequest;
-use App\Models\Film;
 
 /**
  * Class SubtitleCrudController

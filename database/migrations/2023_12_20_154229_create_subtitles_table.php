@@ -13,8 +13,11 @@ return new class extends Migration
     {
         Schema::create('subtitles', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('film_id')->constrained()->onDelete('cascade');
+            $table->unsignedBigInteger('film_id');
             $table->text('content');
+
+            $table->foreign('film_id')->references('id')->on('films')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

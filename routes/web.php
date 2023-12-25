@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\FilmController;
+use App\Http\Controllers\SubtitleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/', [IndexController::class, 'index']);
+
+Route::get('/movies', [FilmController::class, 'index'])->name('movies.index');
+
+Route::get('/subtitles', [SubtitleController::class, 'index'])->name('subtitles.index');

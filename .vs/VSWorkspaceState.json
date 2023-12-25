@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\database",
+    "\\database\\migrations",
+    "\\resources\\views",
+    "\\resources\\views\\Layouts"
+  ],
+  "SelectedNode": "\\database\\migrations\\2023_12_20_153607_create_films_table.php",
+  "PreviewInSolutionExplorer": false
+}

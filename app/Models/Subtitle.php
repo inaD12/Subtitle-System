@@ -15,6 +15,6 @@ class Subtitle extends Model
 
     public function film()
     {
-        return $this->belongsToMany(Film::class);
+        return $this->belongsTo(Film::class, 'film_id', 'id');
     }
 }
