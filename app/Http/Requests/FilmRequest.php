@@ -25,6 +25,7 @@ class FilmRequest extends FormRequest
     public function rules()
     {
         return [
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:10000'
             // 'name' => 'required|min:5|max:255'
         ];
     }
