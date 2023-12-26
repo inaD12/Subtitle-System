@@ -25,7 +25,8 @@ class SubtitleRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'film_id' => 'required',
+             'content' => 'required|min:20'
         ];
     }
 
