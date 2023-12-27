@@ -7,7 +7,7 @@
                     <div class="hero-inner">
                         <div class="hero-copy">
                             <h1 class="hero-title h2-mobile mt-0 is-revealing">Subtitle System</h1>
-                            <p class="hero-paragraph is-revealing">Our landing page template works for all the devices, so you only have to setup it once, and get beautiful results forever.</p>
+                            <p class="hero-paragraph is-revealing">The Subtitle System website is a platform designed to streamline the process of managing and creating subtitles for films. It offers an intuitive and user-friendly interface for uploading, associating, and editing subtitles with their corresponding films. Users can easily navigate through the admin panel to manage film details, upload subtitles, and view a public page with an organized list of films and their associated subtitles.</p>
                         </div>
                         <div class="hero-illustration is-revealing">
                             <svg width="528" height="413" viewBox="0 0 528 413" xmlns="http://www.w3.org/2000/svg">

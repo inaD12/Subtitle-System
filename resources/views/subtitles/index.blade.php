@@ -1,5 +1,14 @@
 @extends('layouts.app')
 
+<style>
+    a.subtitle-link {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+
+
 @section('content')
 <main>
     <div class="container">
@@ -21,7 +30,9 @@
                                 @foreach ($subtitles as $subtitle)
                                     <tr>
                                         <td>{{ $subtitle->film->title }}</td>
-                                        <td>{{ $subtitle->content }}</td>
+                                        <td><a href="{{ route('subtitles.show', $subtitle) }}" target="_blank" class="subtitle-link">
+                                        {{ Str::limit($subtitle->content, 100) }} (Click to view full)
+                                        </a></td>
                                     </tr>
                                 @endforeach
                             </tbody>

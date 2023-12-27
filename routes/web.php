@@ -25,3 +25,5 @@ Route::get('/', [IndexController::class, 'index']);
 Route::get('/movies', [FilmController::class, 'index'])->name('movies.index');
 
 Route::get('/subtitles', [SubtitleController::class, 'index'])->name('subtitles.index');
+
+Route::get('subtitles/{subtitle}', [SubtitleController::class, 'show'])->name('subtitles.show');

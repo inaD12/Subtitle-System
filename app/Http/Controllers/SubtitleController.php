@@ -13,4 +13,9 @@ class SubtitleController extends Controller
 
     return view('subtitles.index', compact('subtitles'));
     }
+
+    public function show(Subtitle $subtitle)
+    {
+        return view('subtitles.subtitle', compact('subtitle'));
+    }
 }
