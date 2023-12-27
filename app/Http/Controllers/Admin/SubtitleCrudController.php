@@ -39,12 +39,16 @@ class SubtitleCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::setFromDb(); // set columns from db columns.
+        $this->crud->addColumn([
+            'name' => 'film_id',
+            'label' => 'Film',
+            'type' => 'select',
+            'entity' => 'film',
+            'attribute' => 'title',
+            'model' => 'App\Models\Film',
+        ]);
 
-        /**
-         * Columns can be defined using the fluent syntax:
-         * - CRUD::column('price')->type('number');
-         */
+        CRUD::setFromDb();
     }
 
     /**
@@ -56,6 +60,15 @@ class SubtitleCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(SubtitleRequest::class);
+        CRUD::addField([
+            'name' => 'film_id',
+            'label' => 'Film',
+            'type' => 'select',
+            'entity' => 'film', 
+            'attribute' => 'title',
+            'model' => 'App\Models\Film',
+        ]);
+    
         CRUD::setFromDb();
     }
 
