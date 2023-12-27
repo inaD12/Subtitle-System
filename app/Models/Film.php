@@ -51,4 +51,11 @@ public function setImageAttribute($value)
     $this->attributes[$attribute_name] = 'storage/' . $this->attributes[$attribute_name];
 
 }
+
+public function scopeSearch($query, $search)
+{
+    return $query->where('title', 'like', '%' . $search . '%')
+                 ->orWhere('genre', 'like', '%' . $search . '%');
+}
+
 }

@@ -10,6 +10,10 @@
             <div class="card">
                 <div class="card-header">
                     <h4>Movies</h4>
+                    <form action="{{ route('film.search') }}" method="GET">
+                     <input type="text" name="search" placeholder="Search by Title and Genre">
+                        <button type="submit">Search</button>
+                    </form>
                 </div>
                 <div class="card-body">
                     <table class="table table table bordered">
@@ -19,6 +23,7 @@
                                 <th>Year</th>
                                 <th>Genre</th>
                                 <th>Image</th>
+                                
                             </tr>
                         </thead>
                         <tbody>

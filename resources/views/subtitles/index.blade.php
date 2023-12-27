@@ -17,6 +17,10 @@
                 <div class="card">
                     <div class="card-header">
                         <h4>Subtitles</h4>
+                        <form method="GET" action="{{ route('subtitles.search') }}">
+                        <input type="text" name="search" id="subtitleSearch" placeholder="Search by Movie Title">
+                         <button type="submit">Search</button>
+                        </form>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered">
