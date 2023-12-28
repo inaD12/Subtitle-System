@@ -9,7 +9,7 @@ class SubtitleController extends Controller
 {
     public function index()
     {
-    $subtitles = Subtitle::all();
+    $subtitles = Subtitle::paginate(10);
 
     return view('subtitles.index', compact('subtitles'));
     }
