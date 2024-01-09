@@ -68,6 +68,12 @@ class SubtitleCrudController extends CrudController
             'attribute' => 'title',
             'model' => 'App\Models\Film',
         ]);
+
+        CRUD::addField([
+            'name' => 'content',
+            'label' => 'Content',
+            'type' => 'summernote',
+        ]);
     
         CRUD::setFromDb();
     }

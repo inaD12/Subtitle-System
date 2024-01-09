@@ -59,8 +59,10 @@ public function setImageAttribute($value)
 
 public function scopeSearch($query, $search)
 {
-    return $query->where('title', 'like', '%' . $search . '%')
-                 ->orWhere('genre', 'like', '%' . $search . '%');
+    return $query->where(function ($query) use ($search) {
+        $query->where('title', 'like', '%' . $search . '%')
+              ->orWhere('genre', 'like', '%' . $search . '%');
+    });
 }
 
 }

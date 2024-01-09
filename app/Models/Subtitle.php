@@ -17,4 +17,11 @@ class Subtitle extends Model
     {
         return $this->belongsTo(Film::class, 'film_id', 'id');
     }
+
+    public function scopeSearch($query, $search)
+    {
+        return $query->whereHas('film', function ($query) use ($search) {
+            $query->where('title', 'like', '%' . $search . '%');
+        });
+    }
 }
