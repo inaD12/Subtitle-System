@@ -17,7 +17,7 @@ class FilmController extends Controller
     public function search(Request $request)
 {
     $search = $request->input('search');
-    $movies = Film::search($search)->get();
+    $movies = Film::search($search)->paginate(10);
 
     return view('movies.index', ['movies' => $movies]);
 }

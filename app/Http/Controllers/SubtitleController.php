@@ -25,7 +25,7 @@ class SubtitleController extends Controller
 
         $subtitles = Subtitle::whereHas('film', function ($query) use ($search) {
             $query->where('title', 'like', '%' . $search . '%');
-        })->get();
+        })->paginate(10);
 
         return view('subtitles.index', ['subtitles' => $subtitles]);
     }
